@@ -17,7 +17,7 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Button Height="80" Margin="5" Grid.Column="0" Content="Products" />
+            <Button Height="80" Margin="5" Grid.Column="0" Content="Products" Click="Button_Click_2" />
             <Button Margin="5" Grid.Column="1" Content="Live support" Click="Button_Click_1" />
             <Button Margin="5" Grid.Column="2" Content="Email support" Click="Button_Click" />
         </Grid>

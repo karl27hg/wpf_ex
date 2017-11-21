@@ -24,7 +24,7 @@
         <TextBox Grid.Row="0" Grid.Column="1" VerticalAlignment="Bottom" Margin="5"/>
 
         <TextBlock Grid.Row="1" Grid.Column="0" Text="Message" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="5" />
-        <TextBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" Margin="5" />
+        <TextBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" Margin="5" Height="200"/>
 
     </Grid>
 </PageFunction>

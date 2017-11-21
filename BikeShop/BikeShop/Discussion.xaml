@@ -7,6 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:BikeShop"
+    xmlns:data="clr-namespace:BikeShop"
     mc:Ignorable="d"
     d:DesignHeight="300" d:DesignWidth="300"
     Title="Discussion">
@@ -20,7 +21,23 @@
             <ColumnDefinition Width="100" />
         </Grid.ColumnDefinitions>
 
-        <ListBox Margin="5" Grid.Row="0" Grid.ColumnSpan="2" />
+        <!--<ListBox Margin="5" Grid.Row="0" Grid.ColumnSpan="2" />-->
+        <ListBox Grid.ColumnSpan="2" Margin="2">
+            <ListBox.ItemsSource>
+                <data:Talk />
+            </ListBox.ItemsSource>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Width="300" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="chat.png" Width="20" />
+                            <TextBlock Text="{Binding Sender}" />
+                        </StackPanel>
+                        <TextBlock Text="{Binding Content}" Margin="20, 0, 0, 0" TextWrapping="Wrap" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
         <TextBox Margin="5" Grid.Row="1" Grid.Column="0" Text="Type your message here" />
         <Button Margin="5" Grid.Row="1" Grid.Column="1" Content="Send" />
     </Grid>
